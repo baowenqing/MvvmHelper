@@ -20,6 +20,6 @@ dependencyResolutionManagement {
         maven { url 'https://maven.aliyun.com/repository/central' }
     }
 }
-rootProject.name='mvvmHelper'
+rootProject.name='文庆mvvm-lib库'
 include ':app'
 include ':helper'

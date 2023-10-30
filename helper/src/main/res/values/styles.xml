@@ -14,4 +14,52 @@
         <item name="android:windowFrame">@null</item>
     </style>
 
+
+
+
+    <style name="AppRootTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge" />
+
+
+    <style name="common_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="common_window_bottom_in_bottom_out" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/common_dialog_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/common_dialog_out_bottom</item>
+    </style>
+
+    <style name="common_window_bottom_in_bottom_out_p" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/common_dialog_in_bottom_p</item>
+        <item name="android:windowExitAnimation">@anim/common_dialog_out_bottom_p</item>
+    </style>
+
+    <!-- 兼容 XUI下的  PickerView 组件的dialog模式下的动画   -->
+
+    <style mce_bogus="1" name="picker_view_scale_anim" parent="android:Animation">
+
+    </style>
+
+
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+
+
+
+
 </resources>

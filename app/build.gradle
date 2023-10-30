@@ -8,15 +8,15 @@ plugins {
 android {
     compileSdkVersion 33
     defaultConfig {
-        applicationId "com.zhixinhuixue.zsyte.xxx"
+        applicationId "com.android.project"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 18
-        versionName "1.1.7"
+        versionCode 1
+        versionName "1.0.0"
     }
 
     buildFeatures {
-        viewBinding = true
+       dataBinding = true
     }
 
     buildTypes {

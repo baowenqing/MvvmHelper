@@ -1,98 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:fillViewport="true">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="vm"
+            type="com.android.project.ui.login.LoginViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/dp.18"
-        android:layout_marginRight="@dimen/dp.18"
-        android:orientation="vertical">
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
-        <me.hgj.mvvmhelper.widget.alpha.UIImageView
-            android:layout_width="@dimen/dp.64"
-            android:layout_height="@dimen/dp.64"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/dp.48"
-            app:ui_radius="999dp"
-            app:ui_shadowElevation="@dimen/dp.12"
-            app:ui_shadowAlpha="1"
-            android:shadowColor="#000000"
-            android:src="@mipmap/ic_launcher" />
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/icon_logo"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <com.noober.background.view.BLLinearLayout
+
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/ll_form"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp.48"
-            android:layout_marginTop="@dimen/dp.48"
-            app:bl_solid_color="@color/colorLinEEE"
-            app:bl_corners_radius="@dimen/dp.3"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:padding="20dp"
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/login_phone"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@null"
-                android:drawableStart="@drawable/ic_login_user"
-                android:drawablePadding="@dimen/dp.6"
-                android:hint="@string/login_phone"
-                android:inputType="phone"
-                android:lines="1"
-                android:maxLength="11"
-                android:paddingLeft="@dimen/dp.12"
-                android:paddingRight="@dimen/dp.12"
-                android:textColor="@color/black"
-                android:textSize="@dimen/dp.15" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.58">
 
-        </com.noober.background.view.BLLinearLayout>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <com.noober.background.view.BLLinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp.48"
-            android:layout_marginTop="@dimen/dp.48"
-            app:bl_solid_color="@color/colorLinEEE"
-            app:bl_corners_radius="@dimen/dp.3"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账号"
+                    android:textSize="18sp" />
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/login_pwd"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@null"
-                android:drawableStart="@drawable/ic_login_pwd"
-                android:drawablePadding="@dimen/dp.6"
-                android:hint="@string/login_password"
-                android:inputType="textPassword"
-                android:lines="1"
-                android:paddingLeft="@dimen/dp.12"
-                android:paddingRight="@dimen/dp.12"
-                android:textColor="@color/black"
-                android:textSize="@dimen/dp.15" />
+                <com.xuexiang.xui.widget.edittext.ClearEditText
+                    android:id="@+id/loginPhone"
 
-        </com.noober.background.view.BLLinearLayout>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
 
-        <com.noober.background.view.BLButton
-            android:id="@+id/login_btn"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp.48"
-            android:layout_marginTop="@dimen/dp.30"
-            android:layout_marginBottom="@dimen/dp.12"
-            android:background="@null"
-            android:gravity="center"
-            android:text="@string/login_submit"
-            android:textColor="@color/white"
-            android:textSize="@dimen/dp.20"
-            app:bl_corners_radius="@dimen/dp.3"
-            app:bl_solid_color="@color/colorPrimary" />
+                    android:hint="请输入账号"
+                    android:singleLine="true"
+                    android:text="@={vm.loginData.account}"
+                    android:textSize="18sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="密码"
+                    android:textSize="18sp" />
+
+                <com.xuexiang.xui.widget.edittext.PasswordEditText
+                    android:id="@+id/loginPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:hint="请输入密码"
+                    android:singleLine="true"
+                    android:text="@={vm.loginData.pwd}"
+                    android:textSize="18sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+            <com.ruffian.library.widget.RTextView
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:onClick="login"
+                android:text="登录"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                app:background_normal="@color/colorPrimary"
+                app:corner_radius="4dp" />
+
+
+        </com.ruffian.library.widget.RLinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Copyright 2021-2023 WMS All Rights Reserved"
+            android:textColor="#888"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

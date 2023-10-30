@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.bar.TitleBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customToolBar"
+    android:layout_width="wrap_content"
+    android:layout_height="44dp"
+    android:background="@color/colorPrimary"
+    app:leftIcon="@mipmap/icon_back"
+    app:leftIconPadding="10dp"
+    app:leftIconWidth="24dp"
+    app:lineVisible="false"
+    app:title="标题"
+    app:titleColor="@color/white"
+    app:titleHorizontalPadding="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|center_vertical"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/iv_right"
+            tools:src="@mipmap/icon_scan"
+            android:layout_width="@dimen/def_height"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+
+</com.hjq.bar.TitleBar>

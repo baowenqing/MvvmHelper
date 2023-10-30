@@ -1,14 +1,5 @@
 <resources>
-    <string name="app_name">嗨起来</string>
-    <string name="bottom_title_home">主页</string>
-    <string name="bottom_title_user">个人中心</string>
-
-
-    <string name="login_submit">登录</string>
-    <string name="login_password">密码</string>
-    <string name="login_phone">手机号</string>
-    <string name="login_register">注册</string>
-    <string name="login_tips">教师账号登录</string>
+    <string name="app_name">测试项目</string>
 
 
 </resources>
