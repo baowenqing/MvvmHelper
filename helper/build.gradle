@@ -106,7 +106,7 @@ dependencies {
     api 'com.tencent.tbs:tbssdk:44275'
     //通用组件库
     api 'com.github.xuexiangjys:XUI:1.2.1'
-    api 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+
     api 'com.github.ChinaLike:TagTextView:0.2.5'
 
     //glide
@@ -119,4 +119,8 @@ dependencies {
 
     api 'org.greenrobot:eventbus:3.2.0'
     api 'com.google.android:flexbox:2.0.1'
+
+    //  这个包的远程依赖没有了  api 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    api files('libs/SwipeDelMenuLayout-V1.3.0.jar')
+
 }
