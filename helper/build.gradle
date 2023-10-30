@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
-    id 'maven-publish'
+//    id 'maven-publish'
 }
 
 task generateSourcesJar(type: Jar){
@@ -44,18 +44,18 @@ android {
     }
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.baowenqing'
-                artifactId = 'MvvmHelper'
-                version = '1.1.1'
-            }
-        }
-    }
-}
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                from components.release
+//                groupId = 'com.github.baowenqing'
+//                artifactId = 'MvvmHelper'
+//                version = '1.1.1'
+//            }
+//        }
+//    }
+//}
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.10"
     implementation 'androidx.core:core-ktx:1.9.0'
