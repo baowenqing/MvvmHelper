@@ -7,7 +7,7 @@ import com.win.mvvmhelper.ext.dp
 import com.win.mvvmhelper.loadsir.callback.SuccessCallback
 import com.win.mvvmhelper.loadsir.core.LoadSir
 import com.win.mvvmhelper.util.KtxActivityLifecycleCallbacks
-import com.win.mvvmhelper.util.mvvmHelperLog
+
 import com.win.mvvmhelper.widget.state.BaseEmptyCallback
 import com.win.mvvmhelper.widget.state.BaseErrorCallback
 import com.win.mvvmhelper.widget.state.BaseLoadingCallback
@@ -34,7 +34,7 @@ object MvvmHelper {
      */
     fun init(application: Application, debug: Boolean) {
         app = application
-        mvvmHelperLog = debug
+
         //注册全局 activity生命周期监听
         application.registerActivityLifecycleCallbacks(KtxActivityLifecycleCallbacks())
         LoadSir.beginBuilder()

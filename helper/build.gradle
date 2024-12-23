@@ -78,22 +78,22 @@ dependencies {
     api "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
     //Toast
     api 'com.github.getActivity:ToastUtils:9.6'
-    //log
-    api "com.github.zhaokaiqiang.klog:library:1.6.0"
+
     //万能adapter
     api "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.11"
     //启动优化异步加载
-    api "com.effective.android:anchors:1.1.1"
+    api 'com.github.baowenqing:Anchors:1.0.0'
     //状态栏
-    api "com.gyf.immersionbar:immersionbar:3.0.0"
-    api "com.gyf.immersionbar:immersionbar-ktx:3.0.0"
+// 基础依赖包，必须要依赖
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+// kotlin扩展（可选）
+    api 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
     //刷新头
     api "com.scwang.smart:refresh-layout-kernel:2.0.1"
     api "com.scwang.smart:refresh-header-classics:2.0.1"
     //利用liveData发送消息
     api 'com.kunminx.arch:unpeek-livedata:7.8.0'
-    //通过标签直接生成shape，无需再写shape.xml
-    api "com.noober.background:core:1.6.5"
+
     //rxHttp
     api "com.squareup.okhttp3:okhttp:4.10.0"
     api 'com.github.liujingxing.rxhttp:rxhttp:3.0.2'

@@ -48,7 +48,7 @@ abstract class BaseVmFragment<VM : BaseViewModel> : Fragment(), BaseIView {
         savedInstanceState: Bundle?
     ): View? {
         isFirst = true
-        javaClass.simpleName.logD()
+
         dataBindView = initViewDataBind(inflater, container)
         val rootView = if (dataBindView == null) {
             inflater.inflate(layoutId, container, false)

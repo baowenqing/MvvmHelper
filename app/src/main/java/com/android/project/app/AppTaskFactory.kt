@@ -1,8 +1,6 @@
 package com.android.project.app
 
-import com.effective.android.anchors.Project
-import com.effective.android.anchors.Task
-import com.effective.android.anchors.TaskCreator
+
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
@@ -10,6 +8,9 @@ import com.tencent.mmkv.MMKV
 import com.android.project.R
 import com.android.project.network.NetHttpClient
 import com.android.project.widget.callback.LoadingCallback
+import com.effective.android.anchors.task.Task
+import com.effective.android.anchors.task.TaskCreator
+import com.effective.android.anchors.task.project.Project
 import com.win.mvvmhelper.base.appContext
 import com.win.mvvmhelper.ext.getColorExt
 import com.win.mvvmhelper.loadsir.callback.SuccessCallback
@@ -25,7 +26,7 @@ import java.util.*
  * 描述　:
  */
 
-object TaskCreator : TaskCreator {
+object MyTaskCreator : TaskCreator {
     override fun createTask(taskName: String): Task {
         return when (taskName) {
             InitNetWork.TASK_ID -> InitNetWork()
@@ -110,7 +111,7 @@ class InitUtils : Task(TASK_ID, true) {
     }
 }
 
-class AppTaskFactory : Project.TaskFactory(TaskCreator)
+class AppTaskFactory : Project.TaskFactory(MyTaskCreator)
 
 /**
  * 模拟初始化SDK

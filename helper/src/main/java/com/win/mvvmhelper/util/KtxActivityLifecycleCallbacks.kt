@@ -14,7 +14,7 @@ import com.win.mvvmhelper.ext.removeActivity
 class KtxActivityLifecycleCallbacks : Application.ActivityLifecycleCallbacks {
 
     override fun onActivityPaused(activity: Activity) {
-        XLog.d(activity.javaClass.simpleName)
+
     }
 
     override fun onActivityStarted(p0: Activity) {
@@ -32,12 +32,12 @@ class KtxActivityLifecycleCallbacks : Application.ActivityLifecycleCallbacks {
     }
 
     override fun onActivityCreated(activity: Activity, p1: Bundle?) {
-        XLog.d(activity.javaClass.simpleName)
+
         addActivity(activity)
     }
 
     override fun onActivityResumed(activity: Activity) {
-        XLog.d(activity.javaClass.simpleName)
+
     }
 
 }

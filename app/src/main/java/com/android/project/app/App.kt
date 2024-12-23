@@ -1,9 +1,9 @@
 package com.android.project.app
 
 import android.app.Application
-import com.effective.android.anchors.AnchorsManager
-import com.effective.android.anchors.Project
 import com.android.project.BuildConfig
+import com.effective.android.anchors.AnchorsManager
+import com.effective.android.anchors.task.project.Project
 import com.win.mvvmhelper.base.MvvmHelper
 import com.win.mvvmhelper.ext.currentProcessName
 
@@ -15,7 +15,7 @@ import com.win.mvvmhelper.ext.currentProcessName
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
-        MvvmHelper.init(this,BuildConfig.DEBUG)
+        MvvmHelper.init(this, BuildConfig.DEBUG)
         val processName = currentProcessName
         if (currentProcessName == packageName) {
             // 主进程初始化
@@ -34,11 +34,11 @@ class App : Application() {
             .debuggable(BuildConfig.DEBUG)
             //设置锚点
             .addAnchor(
-                com.android.project.app.InitNetWork.Companion.TASK_ID,
-                com.android.project.app.InitUtils.Companion.TASK_ID,
-                com.android.project.app.InitComm.Companion.TASK_ID
+                InitNetWork.Companion.TASK_ID,
+                InitUtils.Companion.TASK_ID,
+                InitComm.Companion.TASK_ID
             ).start(
-                Project.Builder("app", com.android.project.app.AppTaskFactory())
+                Project.Builder("app", AppTaskFactory())
                     .add(com.android.project.app.InitNetWork.Companion.TASK_ID)
                     .add(com.android.project.app.InitComm.Companion.TASK_ID)
                     .add(com.android.project.app.InitUtils.Companion.TASK_ID)

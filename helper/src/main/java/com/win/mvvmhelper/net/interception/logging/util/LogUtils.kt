@@ -2,7 +2,7 @@ package com.win.mvvmhelper.net.interception.logging.util
 
 import android.text.TextUtils
 import android.util.Log
-import com.win.mvvmhelper.util.XLog
+
 
 /**
  * 作者　: hegaojian
@@ -18,7 +18,7 @@ class LogUtils private constructor() {
         }
         fun setLog(isLog: Boolean) {
             Companion.isLog = isLog
-            XLog.init(isLog)
+
         }
 
         fun debugInfo(tag: String?, msg: String?) {

@@ -2,7 +2,7 @@ package com.win.mvvmhelper.base
 
 import android.view.View
 import androidx.databinding.ViewDataBinding
-import com.noober.background.BackgroundLibrary
+
 import com.win.mvvmhelper.ext.inflateBinding
 
 /**
@@ -23,7 +23,7 @@ abstract class BaseDbActivity<VM : BaseViewModel,DB: ViewDataBinding> : BaseVmAc
     override fun initViewDataBind(): View? {
         //利用反射 根据泛型得到 ViewDataBinding
         mBind = inflateBinding()
-        BackgroundLibrary.inject(this)
+
         mBind.lifecycleOwner = this
         return mBind.root
     }
