@@ -14,7 +14,7 @@ allprojects {
 }
 
 dependencies {
-		implementation 'com.github.baowenqing:MvvmHelper:1.0.0'
+		implementation 'com.github.baowenqing:MvvmHelper:1.0.6'
 	}
 ```
 
@@ -23,6 +23,9 @@ dependencies {
 ### 打包相关
 
 ```shell
+
+gradlew clean build
+
 
 //打包正式环境
 gradlew assembleRelease

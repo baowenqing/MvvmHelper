@@ -89,8 +89,8 @@ dependencies {
 // kotlin扩展（可选）
     api 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
     //刷新头
-    api "com.scwang.smart:refresh-layout-kernel:2.0.1"
-    api "com.scwang.smart:refresh-header-classics:2.0.1"
+    api 'io.github.scwang90:refresh-layout-kernel:2.0.5'
+    api  'io.github.scwang90:refresh-header-classics:2.0.5'
     //利用liveData发送消息
     api 'com.kunminx.arch:unpeek-livedata:7.8.0'
 
@@ -118,7 +118,8 @@ dependencies {
     api 'com.blankj:utilcodex:1.31.1'
 
     api 'org.greenrobot:eventbus:3.2.0'
-    api 'com.google.android:flexbox:2.0.1'
+
+    api 'com.google.android.flexbox:flexbox:3.0.0'
 
     //  这个包的远程依赖没有了  api 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
     api files('libs/SwipeDelMenuLayout-V1.3.0.jar')
