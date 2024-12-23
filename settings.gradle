@@ -1,10 +1,11 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
+
         google()
         mavenCentral()
-        jcenter()
         maven { url 'https://jitpack.io' }
+        jcenter()
+        gradlePluginPortal()
         //阿里云云效仓库：https://maven.aliyun.com/mvn/guide
         maven { url 'https://maven.aliyun.com/repository/central' }
     }
@@ -14,8 +15,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter()
         maven { url 'https://jitpack.io' }
+        jcenter()
         //阿里云云效仓库：https://maven.aliyun.com/mvn/guide
         maven { url 'https://maven.aliyun.com/repository/central' }
     }
